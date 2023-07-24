@@ -10,8 +10,10 @@ description = "Linear Fox Git"
 keywords = ["git", "linear-fox", "lfx"]
 
 [dependencies]
-git2 = "0.17.2"
+git2 = "^0.17.2"
+libp2p = { version = "^0.52.1", features = ["full"] }
+tokio = { version = "^1.29.1", features = ["full"] }
 
 [lib]
 name = "lfx_git"
-path = "src/lib.rs" 
+test = false 
