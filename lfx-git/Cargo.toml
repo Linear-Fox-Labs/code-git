@@ -1,0 +1,17 @@
+[package]
+name = "lfx-git"
+version = "0.1.0"
+authors = [
+    "Nathan Fargo <ntfargo@proton.me>",
+]
+edition = "2021"
+license = "GPL-3.0-or-later"
+description = "Linear Fox Git"
+keywords = ["git", "linear-fox", "lfx"]
+
+[dependencies]
+git2 = "0.17.2"
+
+[lib]
+name = "lfx_git"
+path = "src/lib.rs" 
