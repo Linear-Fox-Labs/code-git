@@ -3,7 +3,9 @@
 extern crate git2;
   
 // Import module
-pub mod error; 
+pub mod error;
+pub mod signature;
  
 // Export functions and types
-pub use error::ErrorUtil;  
+pub use error::ErrorUtil;
+pub use signature::*;
