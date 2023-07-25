@@ -18,7 +18,3 @@ tokio = { version = "^1.29.1", features = ["full"] }
 [lib]
 name = "lfx_git"
 test = false
-
-[[bin]]
-name = "lfx-git"
-path = "src/main.rs"
