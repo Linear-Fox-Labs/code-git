@@ -9,7 +9,7 @@ pub mod commit;
 pub mod creator;
  
 // Export functions and types
-pub use error::ErrorUtil;
+pub use error::ErrorUtils;
 pub use signature::SignatureUtil;
 pub use commit::*;
 pub use creator::*;

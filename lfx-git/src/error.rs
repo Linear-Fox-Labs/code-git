@@ -3,22 +3,27 @@
 use std::{fmt::Display, io};
 use git2::{Error, ErrorCode};
 
-pub struct ErrorUtil;
+pub trait ErrorUtils {
+    fn is_error_not_found(error: &Error) -> bool;
+    fn is_error_exists(error: &Error) -> bool;
+    fn convert_to_git_error<E: Display>(error: E) -> Error;
+    fn convert_to_io_error(error: Error) -> io::Error;
+}
 
-impl ErrorUtil {
-    pub fn is_not_found_err(error: &Error) -> bool {
+impl ErrorUtils for Error {
+    fn is_error_not_found(error: &Error) -> bool {
         error.code() == ErrorCode::NotFound
     }
 
-    pub fn is_exists_err(error: &Error) -> bool {
+    fn is_error_exists(error: &Error) -> bool {
         error.code() == ErrorCode::Exists
     }
 
-    pub fn into_git_err<E: Display>(error: E) -> Error {
+    fn convert_to_git_error<E: Display>(error: E) -> Error {
         Error::from_str(&error.to_string())
     }
 
-    pub fn into_io_err(error: Error) -> io::Error {
+    fn convert_to_io_error(error: Error) -> io::Error {
         io::Error::new(io::ErrorKind::Other, error.to_string())
     }
-}
+} 

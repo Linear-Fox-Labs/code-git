@@ -1,1 +1,1 @@
-// Planning
+// Copyright © 2023 Linear Fox. This file is under GPLv3 License. 

@@ -1,1 +1,1 @@
-// Signatures & git2 & git commit & Git-Internals-Git-Objects  
+// Copyright © 2023 Linear Fox. This file is under GPLv3 License.
