@@ -1,5 +1,3 @@
-![Gitlfx](https://cdn.linearfox.com/assets/img/lfxcodegit.png)
-
 # Code Collab - "git-src" [README](README.md "Code Collab - git") 
  
 [Linear Fox - Code Collab | Website](https://linearfox.com/codecollab/ "LinearFox - Code Collab")
